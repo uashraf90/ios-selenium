@@ -54,44 +54,65 @@ public class Lifeshield {
 		System.out.println("App Launched");
 		
 	}
+	@Test
 	public void login() throws Exception {
 		
 		
 		
 		
 		
-		if(wd.findElement(By.name("Switch Environment")).isDisplayed()); {
+		if(wd.findElement(By.name("Switch Environment")).isDisplayed()) {
 			wd.findElement(By.name("Switch Environment")).click();
 				System.out.println("Selecting The Environment");
+		}else{
+				System.out.println("Selecting environment failed");
+				// Add code to rerun the test from last step 
 		}
-		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[4]/UIAActionSheet[1]/UIACollectionView[1]/UIACollectionCell[3]/UIAButton[1]")).isDisplayed()); {
+		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[4]/UIAActionSheet[1]/UIACollectionView[1]/UIACollectionCell[3]/UIAButton[1]")).isDisplayed()) {
 			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[4]/UIAActionSheet[1]/UIACollectionView[1]/UIACollectionCell[3]/UIAButton[1]")).click();
 				System.out.println("Environment is selected");
-		}
-		
-		if(wd.findElement(By.name("Login User Name")).isDisplayed());{
+		}else{
+				System.out.println("Environment is not selected");
+				// Add code to rerun the test from last step 
+		}		
+		if(wd.findElement(By.name("Login User Name")).isDisplayed()){
 			wd.findElement(By.name("Login User Name")).sendKeys("ashrafv3");
+				System.out.println("Username Has been entered");
+		}else{
+				System.out.println("Username is not displaying");
+				// Add code to rerun the test from last step 
 		}
-		wd.findElement(By.name("Login Password")).sendKeys("3@rmuffs");
-		wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[2]")).click();
-		wd.findElement(By.name("ibp/staging/ashrafv3")).click();
+		if(wd.findElement(By.name("Login Password")).isDisplayed()){
+			wd.findElement(By.name("Login Password")).sendKeys("3@rmuffs");
+				System.out.println("Password is entered");
+		}else{
+				System.out.println("Password failed to enter");
+				// Add code to rerun the test from last step 
+		}
 		
-		
-		
-		
-		
-		
-		
+		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[2]")).isDisplayed()) {
+			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[2]")).click();
+				System.out.println("Systme is loggin in");
+				try {
+			    Thread.sleep(45000);                 
+			} catch(InterruptedException ex) {
+			    Thread.currentThread().interrupt();
+			}
+							}else{
+										System.out.println("System did not login");
+										// Add code to rerun the test from last step 
+		}
+		if(wd.findElement(By.name("ibp/staging/ashrafv3")).isDisplayed()){
+			System.out.println("System is logged in");
+		}
 		
 		
 	}
-	@Test
-	public void armingAll3() throws Exception {
+	public void armingInstant() throws Exception {
 		
 		wd.findElement(By.name("INSTANT")).click();
 		if(wd.findElement(By.name("INSTANT")).isDisplayed()){
 				System.out.println("Element is good");
-			
 			}else{
 				System.out.println("Element is no show");
 		}
@@ -104,8 +125,11 @@ public class Lifeshield {
 			wd.findElement(By.name("1")).click();
 			wd.findElement(By.name("1")).click();
 			System.out.println("System is disarmed");
-
 		}
+	}
+	public void armingStay() throws Exception {
+	
+		
 		if(wd.findElement(By.name("STAY")).isDisplayed());{
 			wd.findElement(By.name("STAY")).click();
 			System.out.println("System is armed Stay");
@@ -126,9 +150,13 @@ public class Lifeshield {
 			wd.findElement(By.name("1")).click();
 			wd.findElement(By.name("1")).click();
 			wd.findElement(By.name("1")).click();
-			System.out.println("System is disarmed");
-
+			System.out.println("System is disarmed");	
 		}
+		}
+	public void armingAway() throws Exception {
+
+		
+		
 		if(wd.findElement(By.name("AWAY")).isDisplayed());{
 			wd.findElement(By.name("AWAY")).click();
 			System.out.println("System is armed Away");
@@ -163,6 +191,39 @@ public class Lifeshield {
 		
 		
 	}
+	
+	public void logout() throws Exception {
+		
+		
+		if(wd.findElement(By.name("settingsIcon")).isDisplayed()){
+			wd.findElement(By.name("settingsIcon")).click();
+				System.out.println("Settings button is visible");
+		}else{
+				System.out.println("Setting is not visible");
+			//Add code to rerun the test
+		}
+		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]")).isDisplayed()){
+			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]")).click();
+				System.out.println("System is in settings");
+		}else{
+				System.out.println("system is not in settings");
+		}
+		
+		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[6]/UIAStaticText[1]")).isDisplayed()){
+			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[6]/UIAStaticText[1]")).click();
+		}
+		
+		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAAlert[1]/UIAScrollView[1]/UIAStaticText[1]")).isDisplayed()){
+			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAAlert[1]/UIACollectionView[1]/UIACollectionCell[2]/UIAButton[1]")).click();
+				System.out.println("Logout is done");
+		}
+		
+		
+		
+		
+		
+	}
+	
 	@AfterMethod
 	
 	public void testCases() throws Exception {

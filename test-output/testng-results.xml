@@ -1,82 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="86235" started-at="2015-10-29T14:41:13Z" finished-at="2015-10-29T14:42:40Z">
+  <suite name="Default suite" duration-ms="102570" started-at="2015-10-29T15:47:19Z" finished-at="2015-10-29T15:49:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="86235" started-at="2015-10-29T14:41:13Z" finished-at="2015-10-29T14:42:40Z">
+    <test name="Default test" duration-ms="102570" started-at="2015-10-29T15:47:19Z" finished-at="2015-10-29T15:49:01Z">
       <class name="com.lifeshield.qa.Lifeshield">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.lifeshield.qa.Lifeshield@573ddbdd]" name="setUp" is-config="true" duration-ms="24585" started-at="2015-10-29T10:41:13Z" finished-at="2015-10-29T10:41:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="setUp" is-config="true" duration-ms="19107" started-at="2015-10-29T11:47:19Z" finished-at="2015-10-29T11:47:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="armingAll3()[pri:0, instance:com.lifeshield.qa.Lifeshield@573ddbdd]" name="armingAll3" duration-ms="61290" started-at="2015-10-29T10:41:38Z" finished-at="2015-10-29T10:42:39Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 61.28 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
-System info: host: 'lwnp1alpit019', ip: '10.102.100.76', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.7.0_75'
-*** Element info: {Using=name, value=INSTANT}
-Session ID: d504fe13-eb96-4193-b993-a45eef20a7a7
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{platform=MAC, javascriptEnabled=true, databaseEnabled=false, bundleid=com.lifeshield.qa, ipa=LifeShieldQA.ipa, deviceName=iPhone 6 plus, platformName=IOS, browserName=iOS, webStorageEnabled=false, networkConnectionEnabled=false, udid=8ccbec4b6d3d1cb67a78c321c60d603fb5f24319, desired={bundleid=com.lifeshield.qa, ipa=LifeShieldQA.ipa, deviceName=iPhone 6 plus, platformName=IOS, udid=8ccbec4b6d3d1cb67a78c321c60d603fb5f24319}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 61.28 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
-System info: host: 'lwnp1alpit019', ip: '10.102.100.76', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.7.0_75'
-*** Element info: {Using=name, value=INSTANT}
-Session ID: d504fe13-eb96-4193-b993-a45eef20a7a7
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{platform=MAC, javascriptEnabled=true, databaseEnabled=false, bundleid=com.lifeshield.qa, ipa=LifeShieldQA.ipa, deviceName=iPhone 6 plus, platformName=IOS, browserName=iOS, webStorageEnabled=false, networkConnectionEnabled=false, udid=8ccbec4b6d3d1cb67a78c321c60d603fb5f24319, desired={bundleid=com.lifeshield.qa, ipa=LifeShieldQA.ipa, deviceName=iPhone 6 plus, platformName=IOS, udid=8ccbec4b6d3d1cb67a78c321c60d603fb5f24319}, locationContextEnabled=false, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
-	at org.openqa.selenium.By$ByName.findElement(By.java:299)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.lifeshield.qa.Lifeshield.armingAll3(Lifeshield.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="login" duration-ms="83449" started-at="2015-10-29T11:47:38Z" finished-at="2015-10-29T11:49:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- armingAll3 -->
-        <test-method status="PASS" signature="testCases()[pri:0, instance:com.lifeshield.qa.Lifeshield@573ddbdd]" name="testCases" is-config="true" duration-ms="0" started-at="2015-10-29T10:42:40Z" finished-at="2015-10-29T10:42:40Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testCases()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="testCases" is-config="true" duration-ms="0" started-at="2015-10-29T11:49:01Z" finished-at="2015-10-29T11:49:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCases -->
