@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102570" started-at="2015-10-29T15:47:19Z" finished-at="2015-10-29T15:49:01Z">
+  <suite name="Default suite" duration-ms="290159" started-at="2015-10-30T00:34:23Z" finished-at="2015-10-30T00:39:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102570" started-at="2015-10-29T15:47:19Z" finished-at="2015-10-29T15:49:01Z">
+    <test name="Default test" duration-ms="290159" started-at="2015-10-30T00:34:23Z" finished-at="2015-10-30T00:39:14Z">
       <class name="com.lifeshield.qa.Lifeshield">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="setUp" is-config="true" duration-ms="19107" started-at="2015-10-29T11:47:19Z" finished-at="2015-10-29T11:47:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="setUp" is-config="true" duration-ms="21470" started-at="2015-10-29T20:34:23Z" finished-at="2015-10-29T20:34:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="login" duration-ms="83449" started-at="2015-10-29T11:47:38Z" finished-at="2015-10-29T11:49:01Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="login" duration-ms="83603" started-at="2015-10-29T20:34:45Z" finished-at="2015-10-29T20:36:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="testCases()[pri:0, instance:com.lifeshield.qa.Lifeshield@2a009175]" name="testCases" is-config="true" duration-ms="0" started-at="2015-10-29T11:49:01Z" finished-at="2015-10-29T11:49:01Z">
+        <test-method status="PASS" signature="armingInstant()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="armingInstant" duration-ms="21767" started-at="2015-10-29T20:36:08Z" finished-at="2015-10-29T20:36:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCases -->
+        </test-method> <!-- armingInstant -->
+        <test-method status="PASS" signature="armingStay()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="armingStay" duration-ms="69205" started-at="2015-10-29T20:36:30Z" finished-at="2015-10-29T20:37:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- armingStay -->
+        <test-method status="PASS" signature="armingAway()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="armingAway" duration-ms="69172" started-at="2015-10-29T20:37:39Z" finished-at="2015-10-29T20:38:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- armingAway -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.lifeshield.qa.Lifeshield@4a73d6bb]" name="logout" duration-ms="24926" started-at="2015-10-29T20:38:49Z" finished-at="2015-10-29T20:39:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
       </class> <!-- com.lifeshield.qa.Lifeshield -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

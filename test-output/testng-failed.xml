@@ -5,9 +5,12 @@
     <classes>
       <class name="com.lifeshield.qa.Lifeshield">
         <methods>
-          <include name="testCases"/>
+          <include name="login"/>
+          <include name="logout"/>
           <include name="setUp"/>
-          <include name="armingAll3"/>
+          <include name="armingAway"/>
+          <include name="armingStay"/>
+          <include name="armingInstant"/>
         </methods>
       </class> <!-- com.lifeshield.qa.Lifeshield -->
     </classes>

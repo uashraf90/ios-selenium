@@ -18,13 +18,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
 public class Lifeshield {
 	public WebDriver wd = null; 
-	
-	@BeforeMethod
+	@BeforeTest
 	public void setUp() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		//This is the Real device. 
@@ -46,15 +46,19 @@ public class Lifeshield {
 		//capabilities.setCapability("PID", value);*/
 		
 		
-	
-		wd = new RemoteWebDriver(new URL("http://10.102.100.76:4723/wd/hub"), capabilities);
+		
+		wd = new RemoteWebDriver(new URL("http://172.31.98.43:4723/wd/hub"), capabilities);
 		wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		
 		System.out.println("App Launched");
 		
 	}
-	@Test
+	
+	
+
+@Test(priority=1)
+	
 	public void login() throws Exception {
 		
 		
@@ -108,6 +112,8 @@ public class Lifeshield {
 		
 		
 	}
+@Test(priority=2)
+
 	public void armingInstant() throws Exception {
 		
 		wd.findElement(By.name("INSTANT")).click();
@@ -127,6 +133,7 @@ public class Lifeshield {
 			System.out.println("System is disarmed");
 		}
 	}
+	@Test(priority=3)
 	public void armingStay() throws Exception {
 	
 		
@@ -153,6 +160,8 @@ public class Lifeshield {
 			System.out.println("System is disarmed");	
 		}
 		}
+	@Test(priority=4)
+
 	public void armingAway() throws Exception {
 
 		
@@ -191,7 +200,8 @@ public class Lifeshield {
 		
 		
 	}
-	
+	@Test(priority=5)
+
 	public void logout() throws Exception {
 		
 		
@@ -214,29 +224,14 @@ public class Lifeshield {
 		}
 		
 		if(wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAAlert[1]/UIAScrollView[1]/UIAStaticText[1]")).isDisplayed()){
-			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAAlert[1]/UIACollectionView[1]/UIACollectionCell[2]/UIAButton[1]")).click();
+			wd.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAAlert[1]/UIAScrollView[1]/UIAStaticText[1]")).click();
 				System.out.println("Logout is done");
 		}
-		
-		
-		
-		
+	}
 		
 	}
 	
-	@AfterMethod
-	
-	public void testCases() throws Exception {
-		
-		
-		
-		
-		
-		
-		
-	}
 
-	   }
 	
 	
 
